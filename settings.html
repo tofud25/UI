@@ -1,0 +1,112 @@
+<div id="fancy_mobile_drawer" class="inline-drawer">
+    <div class="inline-drawer-toggle inline-drawer-header st-fancy-header">
+        <div class="st-fancy-header-title">
+            <span class="st-fancy-badge">PRO</span>
+            <b>✨ Fancy Mobile UI</b>
+        </div>
+        <div class="inline-drawer-icon fa-solid fa-circle-chevron-down down"></div>
+    </div>
+    <div class="inline-drawer-content st-fancy-panel-content">
+        <div class="st-fancy-card">
+            <!-- Master Toggle -->
+            <div class="st-fancy-row">
+                <div class="st-fancy-label-group">
+                    <span class="st-fancy-item-title">Kích hoạt Fancy UI</span>
+                    <span class="st-fancy-item-desc">Bật giao diện kính mờ và tối ưu hóa cho màn hình điện thoại</span>
+                </div>
+                <label class="st-fancy-switch">
+                    <input id="fancy_ui_enabled" type="checkbox" />
+                    <span class="st-fancy-slider"></span>
+                </label>
+            </div>
+
+            <!-- Theme Preset -->
+            <div class="st-fancy-row">
+                <div class="st-fancy-label-group">
+                    <span class="st-fancy-item-title">Bộ màu chủ đạo (Theme)</span>
+                    <span class="st-fancy-item-desc">Chọn phong cách màu sắc hiển thị</span>
+                </div>
+                <select id="fancy_ui_theme" class="text_pole st-fancy-select">
+                    <option value="cyberpunk">🔮 Cyberpunk Violet</option>
+                    <option value="oled">🌌 OLED Midnight</option>
+                    <option value="emerald">💎 Emerald Matrix</option>
+                    <option value="sakura">🌸 Sakura Rose</option>
+                </select>
+            </div>
+
+            <hr class="st-fancy-divider" />
+
+            <!-- Glassmorphism Blur -->
+            <div class="st-fancy-row">
+                <div class="st-fancy-label-group">
+                    <span class="st-fancy-item-title">Kính mờ cường lực (Glassmorphism)</span>
+                    <span class="st-fancy-item-desc">Hiệu ứng làm mờ nền sau khung chat</span>
+                </div>
+                <label class="st-fancy-switch">
+                    <input id="fancy_ui_glass" type="checkbox" />
+                    <span class="st-fancy-slider"></span>
+                </label>
+            </div>
+
+            <!-- Touch Booster for Mobile -->
+            <div class="st-fancy-row">
+                <div class="st-fancy-label-group">
+                    <span class="st-fancy-item-title">Tối ưu nút bấm ngón tay</span>
+                    <span class="st-fancy-item-desc">Phóng to các nút sửa, xóa, vuốt (swipe) để dễ bấm trên điện thoại</span>
+                </div>
+                <label class="st-fancy-switch">
+                    <input id="fancy_ui_touch_booster" type="checkbox" />
+                    <span class="st-fancy-slider"></span>
+                </label>
+            </div>
+
+            <!-- Floating Bubbles -->
+            <div class="st-fancy-row">
+                <div class="st-fancy-label-group">
+                    <span class="st-fancy-item-title">Bong bóng chat hiện đại</span>
+                    <span class="st-fancy-item-desc">Tách biệt rõ rệt tin nhắn Người dùng & Nhân vật</span>
+                </div>
+                <label class="st-fancy-switch">
+                    <input id="fancy_ui_bubbles" type="checkbox" />
+                    <span class="st-fancy-slider"></span>
+                </label>
+            </div>
+
+            <!-- Quick Floating Button -->
+            <div class="st-fancy-row">
+                <div class="st-fancy-label-group">
+                    <span class="st-fancy-item-title">Nút nổi tiện ích trên màn hình</span>
+                    <span class="st-fancy-item-desc">Nút tròn nhỏ góc màn hình giúp đổi theme nhanh</span>
+                </div>
+                <label class="st-fancy-switch">
+                    <input id="fancy_ui_quick_btn" type="checkbox" />
+                    <span class="st-fancy-slider"></span>
+                </label>
+            </div>
+
+            <hr class="st-fancy-divider" />
+
+            <!-- Border Radius Slider -->
+            <div class="st-fancy-slider-container">
+                <div class="st-fancy-slider-header">
+                    <span>Độ bo góc bong bóng (Border Radius):</span>
+                    <b id="fancy_ui_radius_val">18px</b>
+                </div>
+                <input id="fancy_ui_radius" type="range" min="6" max="28" step="1" value="18" class="st-fancy-range" />
+            </div>
+
+            <!-- Blur Slider -->
+            <div class="st-fancy-slider-container" style="margin-top: 12px;">
+                <div class="st-fancy-slider-header">
+                    <span>Độ mờ kính (Blur Intensity):</span>
+                    <b id="fancy_ui_blur_val">14px</b>
+                </div>
+                <input id="fancy_ui_blur" type="range" min="0" max="25" step="1" value="14" class="st-fancy-range" />
+            </div>
+
+            <div class="st-fancy-footer">
+                <span>📱 Thiết kế riêng cho Mobile SillyTavern</span>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,455 @@
+/* ==========================================================================
+   ✨ Fancy Mobile UI for SillyTavern - Modern Glassmorphism & Mobile Styling
+   ========================================================================== */
+
+/* Theme Variables */
+:root {
+    --st-fancy-radius: 18px;
+    --st-fancy-blur: 14px;
+    --st-fancy-touch-scale: 1;
+}
+
+body.st-theme-cyberpunk {
+    --st-fancy-accent: #a855f7;
+    --st-fancy-accent-gradient: linear-gradient(135deg, #a855f7, #06b6d4);
+    --st-fancy-accent-glow: rgba(168, 85, 247, 0.35);
+    --st-fancy-card-bg: rgba(20, 20, 36, 0.72);
+    --st-fancy-user-bg: rgba(42, 23, 62, 0.65);
+    --st-fancy-border: rgba(168, 85, 247, 0.25);
+    --st-fancy-text-glow: rgba(168, 85, 247, 0.2);
+}
+
+body.st-theme-oled {
+    --st-fancy-accent: #38bdf8;
+    --st-fancy-accent-gradient: linear-gradient(135deg, #38bdf8, #818cf8);
+    --st-fancy-accent-glow: rgba(56, 189, 248, 0.28);
+    --st-fancy-card-bg: rgba(10, 10, 12, 0.85);
+    --st-fancy-user-bg: rgba(18, 26, 38, 0.75);
+    --st-fancy-border: rgba(255, 255, 255, 0.12);
+    --st-fancy-text-glow: rgba(56, 189, 248, 0.2);
+}
+
+body.st-theme-emerald {
+    --st-fancy-accent: #10b981;
+    --st-fancy-accent-gradient: linear-gradient(135deg, #10b981, #06b6d4);
+    --st-fancy-accent-glow: rgba(16, 185, 129, 0.32);
+    --st-fancy-card-bg: rgba(10, 26, 20, 0.74);
+    --st-fancy-user-bg: rgba(16, 42, 32, 0.7);
+    --st-fancy-border: rgba(16, 185, 129, 0.28);
+    --st-fancy-text-glow: rgba(16, 185, 129, 0.2);
+}
+
+body.st-theme-sakura {
+    --st-fancy-accent: #f43f5e;
+    --st-fancy-accent-gradient: linear-gradient(135deg, #f43f5e, #fbbf24);
+    --st-fancy-accent-glow: rgba(244, 63, 94, 0.32);
+    --st-fancy-card-bg: rgba(30, 16, 24, 0.75);
+    --st-fancy-user-bg: rgba(48, 20, 36, 0.7);
+    --st-fancy-border: rgba(244, 63, 94, 0.28);
+    --st-fancy-text-glow: rgba(244, 63, 94, 0.2);
+}
+
+/* ==========================================================================
+   1. Extension Settings Drawer Panel (In SillyTavern Extensions tab)
+   ========================================================================== */
+#fancy_mobile_drawer {
+    margin: 8px 0;
+    border-radius: 14px;
+    background: rgba(24, 24, 38, 0.85) !important;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+    overflow: hidden;
+}
+
+.st-fancy-header {
+    display: flex !important;
+    justify-content: space-between !important;
+    align-items: center !important;
+    padding: 12px 14px !important;
+    background: linear-gradient(90deg, rgba(168, 85, 247, 0.15), transparent) !important;
+    cursor: pointer;
+    user-select: none;
+}
+
+.st-fancy-header-title {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 1.05rem;
+    color: #f1f5f9;
+}
+
+.st-fancy-badge {
+    background: linear-gradient(135deg, #a855f7, #3b82f6);
+    color: #fff;
+    font-size: 0.65rem;
+    font-weight: 800;
+    padding: 2px 7px;
+    border-radius: 20px;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+}
+
+.st-fancy-panel-content {
+    padding: 14px !important;
+}
+
+.st-fancy-card {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.st-fancy-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 12px;
+}
+
+.st-fancy-label-group {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+
+.st-fancy-item-title {
+    font-weight: 600;
+    font-size: 0.92rem;
+    color: #e2e8f0;
+}
+
+.st-fancy-item-desc {
+    font-size: 0.78rem;
+    color: #94a3b8;
+    line-height: 1.3;
+}
+
+.st-fancy-select {
+    padding: 6px 12px !important;
+    border-radius: 10px !important;
+    background: rgba(15, 23, 42, 0.8) !important;
+    border: 1px solid rgba(255, 255, 255, 0.15) !important;
+    color: #fff !important;
+    font-size: 0.88rem !important;
+    cursor: pointer;
+}
+
+.st-fancy-divider {
+    border: none;
+    height: 1px;
+    background: rgba(255, 255, 255, 0.08);
+    margin: 4px 0;
+}
+
+/* Custom Modern Switch */
+.st-fancy-switch {
+    position: relative;
+    display: inline-block;
+    width: 44px;
+    height: 24px;
+    flex-shrink: 0;
+}
+
+.st-fancy-switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.st-fancy-slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background-color: rgba(255, 255, 255, 0.15);
+    transition: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    border-radius: 24px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.st-fancy-slider:before {
+    position: absolute;
+    content: "";
+    height: 18px;
+    width: 18px;
+    left: 2px;
+    bottom: 2px;
+    background-color: #ffffff;
+    transition: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    border-radius: 50%;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+.st-fancy-switch input:checked + .st-fancy-slider {
+    background: var(--st-fancy-accent-gradient, linear-gradient(135deg, #a855f7, #06b6d4));
+}
+
+.st-fancy-switch input:checked + .st-fancy-slider:before {
+    transform: translateX(20px);
+}
+
+/* Slider Controls */
+.st-fancy-slider-container {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.st-fancy-slider-header {
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.85rem;
+    color: #cbd5e1;
+}
+
+.st-fancy-range {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 100%;
+    height: 6px;
+    border-radius: 5px;
+    background: rgba(255, 255, 255, 0.15);
+    outline: none;
+}
+
+.st-fancy-range::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    background: var(--st-fancy-accent, #a855f7);
+    cursor: pointer;
+    box-shadow: 0 0 10px var(--st-fancy-accent-glow, rgba(168, 85, 247, 0.5));
+}
+
+.st-fancy-footer {
+    text-align: center;
+    font-size: 0.75rem;
+    color: #64748b;
+    margin-top: 6px;
+}
+
+/* ==========================================================================
+   2. Main SillyTavern UI Enhancements (Active when .st-fancy-mobile-enabled)
+   ========================================================================== */
+
+body.st-fancy-mobile-enabled {
+    --st-fancy-transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* Chat container & message cards */
+body.st-fancy-mobile-enabled #chat {
+    padding-bottom: 95px !important;
+}
+
+body.st-fancy-mobile-enabled .mes {
+    border-radius: var(--st-fancy-radius, 18px) !important;
+    margin-bottom: 14px !important;
+    background: var(--st-fancy-card-bg) !important;
+    border: 1px solid var(--st-fancy-border) !important;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.35) !important;
+    transition: var(--st-fancy-transition);
+    position: relative;
+    overflow: hidden;
+}
+
+/* Glassmorphism blur filter */
+body.st-fancy-mobile-enabled.st-glass-active .mes {
+    backdrop-filter: blur(var(--st-fancy-blur, 14px)) !important;
+    -webkit-backdrop-filter: blur(var(--st-fancy-blur, 14px)) !important;
+}
+
+/* Character message styling */
+body.st-fancy-mobile-enabled .mes:not([is_user="true"]) {
+    border-left: 3.5px solid var(--st-fancy-accent) !important;
+}
+
+body.st-fancy-mobile-enabled .mes:not([is_user="true"]) .avatar img {
+    border-radius: 50% !important;
+    border: 2px solid var(--st-fancy-accent) !important;
+    box-shadow: 0 0 15px var(--st-fancy-accent-glow) !important;
+    transition: transform 0.3s ease;
+}
+
+/* User message styling */
+body.st-fancy-mobile-enabled .mes[is_user="true"] {
+    background: var(--st-fancy-user-bg) !important;
+    border-right: 3.5px solid var(--st-fancy-accent) !important;
+}
+
+/* Floating bubble appearance */
+body.st-fancy-mobile-enabled.st-bubbles-active .mes[is_user="true"] {
+    margin-left: 10% !important;
+    border-radius: var(--st-fancy-radius, 18px) var(--st-fancy-radius, 18px) 4px var(--st-fancy-radius, 18px) !important;
+}
+
+body.st-fancy-mobile-enabled.st-bubbles-active .mes:not([is_user="true"]) {
+    margin-right: 6% !important;
+    border-radius: var(--st-fancy-radius, 18px) var(--st-fancy-radius, 18px) var(--st-fancy-radius, 18px) 4px !important;
+}
+
+/* Typography polish */
+body.st-fancy-mobile-enabled .mes_text {
+    line-height: 1.62 !important;
+    font-size: 1rem !important;
+    color: #f8fafc !important;
+    letter-spacing: 0.2px;
+}
+
+body.st-fancy-mobile-enabled .ch_name {
+    font-weight: 700 !important;
+    color: var(--st-fancy-accent) !important;
+    letter-spacing: 0.3px;
+    text-shadow: 0 0 12px var(--st-fancy-text-glow);
+}
+
+/* ==========================================================================
+   3. Mobile Touch Booster: Ergonomic Action Buttons
+   ========================================================================== */
+body.st-fancy-mobile-enabled.st-touch-boosted .mes_buttons {
+    display: flex !important;
+    gap: 8px !important;
+    flex-wrap: wrap !important;
+    margin-top: 8px !important;
+    opacity: 0.95 !important;
+}
+
+body.st-fancy-mobile-enabled.st-touch-boosted .mes_button {
+    width: 36px !important;
+    height: 36px !important;
+    min-width: 36px !important;
+    border-radius: 12px !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    background: rgba(255, 255, 255, 0.08) !important;
+    border: 1px solid rgba(255, 255, 255, 0.1) !important;
+    font-size: 15px !important;
+    color: #cbd5e1 !important;
+    transition: transform 0.15s ease, background-color 0.2s ease !important;
+}
+
+body.st-fancy-mobile-enabled.st-touch-boosted .mes_button:active {
+    transform: scale(0.88) !important;
+    background: var(--st-fancy-accent) !important;
+    color: #fff !important;
+}
+
+/* ==========================================================================
+   4. Floating Dock for Bottom Send Bar (#send_form)
+   ========================================================================== */
+body.st-fancy-mobile-enabled #send_form {
+    background: rgba(14, 14, 24, 0.82) !important;
+    border-radius: 20px !important;
+    border: 1px solid var(--st-fancy-border) !important;
+    box-shadow: 0 10px 35px rgba(0, 0, 0, 0.5) !important;
+    backdrop-filter: blur(18px) !important;
+    -webkit-backdrop-filter: blur(18px) !important;
+    margin: 8px 10px 10px 10px !important;
+    padding: 6px 10px !important;
+    transition: var(--st-fancy-transition);
+}
+
+body.st-fancy-mobile-enabled #send_textarea {
+    border-radius: 14px !important;
+    background: transparent !important;
+    border: none !important;
+    color: #fff !important;
+    font-size: 0.98rem !important;
+    padding: 8px !important;
+}
+
+body.st-fancy-mobile-enabled #send_textarea:focus {
+    outline: none !important;
+}
+
+body.st-fancy-mobile-enabled #send_but {
+    border-radius: 50% !important;
+    width: 44px !important;
+    height: 44px !important;
+    min-width: 44px !important;
+    background: var(--st-fancy-accent-gradient) !important;
+    color: #ffffff !important;
+    box-shadow: 0 4px 15px var(--st-fancy-accent-glow) !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    transition: transform 0.2s ease !important;
+}
+
+body.st-fancy-mobile-enabled #send_but:active {
+    transform: scale(0.9) !important;
+}
+
+/* ==========================================================================
+   5. Quick Floating Widget on Mobile Screen
+   ========================================================================== */
+#st_fancy_quick_pill {
+    position: fixed;
+    right: 14px;
+    bottom: 90px;
+    z-index: 9999;
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    background: var(--st-fancy-accent-gradient, linear-gradient(135deg, #a855f7, #06b6d4));
+    box-shadow: 0 4px 20px var(--st-fancy-accent-glow, rgba(168, 85, 247, 0.5));
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    font-size: 1.25rem;
+    cursor: pointer;
+    user-select: none;
+    border: 1.5px solid rgba(255, 255, 255, 0.3);
+    transition: transform 0.2s ease, opacity 0.3s ease;
+}
+
+#st_fancy_quick_pill:active {
+    transform: scale(0.9);
+}
+
+/* Quick Menu Popup */
+#st_fancy_quick_modal {
+    position: fixed;
+    right: 16px;
+    bottom: 145px;
+    z-index: 10000;
+    width: 210px;
+    background: rgba(18, 18, 28, 0.95);
+    backdrop-filter: blur(20px);
+    border: 1px solid var(--st-fancy-border, rgba(168, 85, 247, 0.4));
+    border-radius: 16px;
+    padding: 12px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.6);
+    display: none;
+    flex-direction: column;
+    gap: 8px;
+    animation: stFancyPop 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+@keyframes stFancyPop {
+    from { opacity: 0; transform: translateY(12px) scale(0.92); }
+    to { opacity: 1; transform: translateY(0) scale(1); }
+}
+
+.st-quick-theme-btn {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 8px 10px;
+    border-radius: 10px;
+    background: rgba(255, 255, 255, 0.06);
+    color: #f1f5f9;
+    font-size: 0.85rem;
+    font-weight: 500;
+    cursor: pointer;
+    border: 1px solid transparent;
+    transition: 0.2s ease;
+}
+
+.st-quick-theme-btn:active {
+    background: var(--st-fancy-accent, #a855f7);
+    color: #fff;
+}
